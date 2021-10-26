@@ -1,0 +1,11 @@
+nyuv2/imgs/*
+nyuv2/logs/*
+nyuv2/models/*
+nyuv2/slurm.sh
+nyuv2/*.pt
+
+cityscapes/imgs/*
+cityscapes/logs/*
+cityscapes/models/*
+cityscapes/slurm.sh
+cityscapes/*.pt
