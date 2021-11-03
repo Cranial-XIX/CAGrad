@@ -1,5 +1,5 @@
 # Conflict-Averse Gradient Descent for Multitask Learning (CAGrad)
-This repo contains the source code for CAGrad, which has been accepted to NeurIPS 2021.
+This repo contains the source code for CAGrad, which has been accepted to **NeurIPS 2021**.
 
 ## Toy Optimization Problem
 
