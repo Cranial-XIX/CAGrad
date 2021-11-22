@@ -483,7 +483,10 @@ def multi_task_mgd_trainer(train_loader, test_loader, multi_task_model, device,
             optimizer.zero_grad()
             if method == "graddrop":
                 for i in range(3):
-                    train_loss_tmp[i].backward(retain_graph=True)
+                    if i < 3:
+                        train_loss_tmp[i].backward(retain_graph=True)
+                    else:
+                        train_loss_tmp[i].backward()
                     grad2vec(multi_task_model, grads, grad_dims, i)
                     multi_task_model.zero_grad_shared_modules()
                 g = graddrop(grads)
@@ -491,7 +494,10 @@ def multi_task_mgd_trainer(train_loader, test_loader, multi_task_model, device,
                 optimizer.step()
             elif method == "mgd":
                 for i in range(3):
-                    train_loss_tmp[i].backward(retain_graph=True)
+                    if i < 3:
+                        train_loss_tmp[i].backward(retain_graph=True)
+                    else:
+                        train_loss_tmp[i].backward()
                     grad2vec(multi_task_model, grads, grad_dims, i)
                     multi_task_model.zero_grad_shared_modules()
                 g = mgd(grads)
@@ -499,7 +505,10 @@ def multi_task_mgd_trainer(train_loader, test_loader, multi_task_model, device,
                 optimizer.step()
             elif method == "pcgrad":
                 for i in range(3):
-                    train_loss_tmp[i].backward(retain_graph=True)
+                    if i < 3:
+                        train_loss_tmp[i].backward(retain_graph=True)
+                    else:
+                        train_loss_tmp[i].backward()
                     grad2vec(multi_task_model, grads, grad_dims, i)
                     multi_task_model.zero_grad_shared_modules()
                 g = pcgrad(grads, rng)
@@ -507,7 +516,10 @@ def multi_task_mgd_trainer(train_loader, test_loader, multi_task_model, device,
                 optimizer.step()
             elif method == "cagrad":
                 for i in range(3):
-                    train_loss_tmp[i].backward(retain_graph=True)
+                    if i < 3:
+                        train_loss_tmp[i].backward(retain_graph=True)
+                    else:
+                        train_loss_tmp[i].backward()
                     grad2vec(multi_task_model, grads, grad_dims, i)
                     multi_task_model.zero_grad_shared_modules()
                 g = cagrad(grads, alpha, rescale=1)
