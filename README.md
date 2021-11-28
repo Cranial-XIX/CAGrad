@@ -15,6 +15,20 @@ The supervised multitask learning experiments are conducted on NYU-v2 and CitySc
 
 **update 2021/11/22:** Thank [@lushleaf](https://github.com/lushleaf) for finding that replacing the last `backward(retain_graph=True)` to  `backward()` saves much GPU memory.
 
+## Multitask Reinforcement Learning (MTRL)
+The MTRL experiments are conducted on [Metaworld](https://github.com/rlworkgroup/metaworld) benchmarks. In particular, we follow the [mtrl](https://github.com/facebookresearch/mtrl) codebase and the experiment setup in [this paper](http://proceedings.mlr.press/v139/sodhani21a/sodhani21a.pdf).
+
+1. Install [mtrl](https://github.com/facebookresearch/mtrl) according to the instructions.
+
+2. Git clone [Metaworld](https://github.com/rlworkgroup/metaworld) and change to `d9a75c451a15b0ba39d8b7a8b6d18d883b8655d8` commit (Feb 26, 2021). Install metaworld accordingly.
+
+3. Copy the `mtrl_files` folder under mtrl of this repo to the cloned repo of mtrl. Then
+```
+cd PATH_TO_MTRL/mtrl_files/ && chmod +x mv.sh && ./mv.sh
+```
+Then follow the `run.sh` script to run experiments (We are still testing the results but the code should be runnable).
+
+
 ## Citations
 If you find our work interesting or the repo useful, please consider citing [this paper](https://arxiv.org/pdf/2110.14048.pdf):
 ```
