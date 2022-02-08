@@ -28,6 +28,9 @@ cd PATH_TO_MTRL/mtrl_files/ && chmod +x mv.sh && ./mv.sh
 ```
 Then follow the `run.sh` script to run experiments (We are still testing the results but the code should be runnable).
 
+## Solving the Dual Optimization in Practice
+
+![cagrad](https://github.com/Cranial-XIX/CAGrad/blob/main/misc/cagrad_in_practice.png)
 
 ## Citations
 If you find our work interesting or the repo useful, please consider citing [this paper](https://arxiv.org/pdf/2110.14048.pdf):
