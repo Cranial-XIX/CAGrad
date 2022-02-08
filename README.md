@@ -38,7 +38,8 @@ If you find our work interesting or the repo useful, please consider citing [thi
 @article{liu2021conflict,
   title={Conflict-Averse Gradient Descent for Multi-task Learning},
   author={Liu, Bo and Liu, Xingchao and Jin, Xiaojie and Stone, Peter and Liu, Qiang},
-  journal={arXiv preprint arXiv:2110.14048},
+  journal={Advances in Neural Information Processing Systems},
+  volume={34},
   year={2021}
 }
 ```
